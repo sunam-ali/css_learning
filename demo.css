@@ -1,0 +1,34 @@
+*{
+    box-sizing: border-box;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+div{
+    padding: 1rem;
+    margin: 1rem 0;
+    width: 20rem;
+}
+.btn{
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+}
+.card__title{
+    color: green;
+}
+.card__btn--large{
+    width: 20rem;
+}
+.feedback{
+    background-color: lightseagreen;
+}
+.card--large{
+    background-color: lightslategray;
+    width: 50rem;
+}
+/* 1. specificity issue: avoid id /tag seclector  */
+/* 2. classname clashes issue */
+/* 3. Not a standard name for class */

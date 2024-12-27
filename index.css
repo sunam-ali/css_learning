@@ -1,0 +1,205 @@
+:root{
+    --text-color: #003b25;
+    --padding: 1rem;
+}
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: sans-serif;
+}
+body{
+    background-color: lightslategray;
+}
+nav{
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    background-color: lightsalmon;
+    z-index: 2;
+    width: 100%;
+}
+nav ul{
+    display: flex;
+    gap: 5rem;
+}
+nav ul li a{
+    color: black;
+    font-size: 1.4rem;
+    transition: all 0.4s linear;
+    display: inline-block;
+}
+nav ul li a:hover{
+    color: #ffffff;
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+header{
+    height: 100vh;
+    background: url(./images/baby.jpg) no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    filter: saturate(1);
+}
+header:hover{
+    filter: saturate(0);
+}
+main{
+    background-color: lightseagreen;
+    padding: var(--padding);
+    color: var(--text-color);
+}
+
+.section-title{
+    text-align: center;
+}
+.skills{
+    min-height: 30vh;
+}
+.row{
+    min-height: 70vh;
+    gap: 1rem;
+}
+.card{
+    width: 25%;
+    background-color: lightslategray;
+    padding: var(--padding);
+    color: black;
+    transition: all 0.5s linear;
+    transform: skew(2deg);
+}
+.card:hover{
+    box-shadow: 0.1rem 0.2rem 0.8rem rgba(122, 60, 60, 0.5);
+    /* transform: rotate(80deg) scale(1.2); */
+    transform: translate(20px , 50px);
+}
+
+footer{
+    background-color: lightgreen;
+    padding: var(--padding);
+    color: var(--text-color);
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexboxs{
+    min-height: 80vh;
+    background-color: brown;
+    flex-direction: row;
+    gap: 1rem;
+}
+.flexbox{
+    background-color: orange;
+    height: 20vh;
+    width: 25%;
+    transition: all 1s 0.5s;
+    transition-timing-function: linear;
+}
+.flexbox:hover{
+    background-color: aqua;
+    color: blue;
+}
+.team-section{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.team-members{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+.team-member{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 1rem;
+    border-radius: 10px;
+}
+#team-member2{
+    background-color: lightgreen;
+    /* grid-column: 1 / span 2; */
+}
+
+/* responsiveness */
+@media screen and (max-width: 992px){
+    .skills{
+        background-color: rebeccapurple;
+    }
+}
+@media screen and (max-width: 768px){
+    .team-members{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+@media screen and (max-width: 600px){
+    header{
+        display: none;
+    }
+    .skills{
+        background-color: lightcyan;
+        padding: 2rem 0;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .row .card{
+        width: 80%;
+    }
+    .flexboxs{
+        flex-direction: column;
+    }
+    .flexbox{
+        width: 80%;
+    }
+    .team-members{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .team-member{
+        width: 80%;
+    }
+}
+.parent-div{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle-div{
+    background-color: lightsalmon;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    animation: circle-animation 4s ease-in-out 0.1s infinite;
+    position: relative;
+}
+@keyframes circle-animation {
+    25%{
+        background-color: #fff;
+        top: -100px;
+        left: 0px;
+    }
+    50%{
+        background-color: bisque;
+        top: -50px;
+        left: 0px;
+    }
+    75%{
+        background-color: lightslategray;
+        top: -100px;
+        left: 0px;
+    }
+    100%{
+        background-color: yellowgreen;
+        top: 0px;
+        left: 0px;
+    }
+}
