@@ -45,3 +45,5 @@
     - Css Architechture: Css Specificity , BEM / OOCSS / SMACSS
 
 - C. Project
+  [blogwebsite](https://blogwebsite-weld.vercel.app/)
+  [e-commerce]([https://blogwebsite-weld.vercel.app/](https://project-2-e-commerce.vercel.app/))
